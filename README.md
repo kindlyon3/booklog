@@ -27,7 +27,7 @@ Editing the YAML by hand works too; run `./booklog enrich` afterwards to fetch d
 
 ### From a phone
 
-Open a new issue with the **Book** template. Choosing **Finished** for the title being read marks it finished; any other title is added. A workflow applies it, fetches details, commits, redeploys, and closes the issue with what it matched. If something is wrong it comments with the error; edit the issue to retry. Only issues opened by the repository owner are applied.
+Open a new issue with the **Book** template, using the book's title as the issue title. Choosing **Finished** for the title being read marks it finished; any other title is added. A workflow applies it, fetches details, commits, redeploys, and closes the issue with what it matched. If something is wrong it comments with the error; edit the issue to retry. Only issues opened by the repository owner are applied.
 
 Pull before editing locally, since these commits happen on GitHub.
 

@@ -1,13 +1,6 @@
 name: Book
-description: Add a book, or finish the one being read
-title: Book
+description: Add a book, or finish the one being read. Use the book's title as the issue title.
 body:
-  - type: input
-    id: title
-    attributes:
-      label: Title
-    validations:
-      required: true
   - type: input
     id: author
     attributes:

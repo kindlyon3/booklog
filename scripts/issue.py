@@ -36,7 +36,8 @@ def command(form: dict[str, str]) -> list[str]:
 
 
 if __name__ == "__main__":
-    argv = command(fields(os.environ["ISSUE_BODY"]))
+    form = fields(os.environ["ISSUE_BODY"]) | {"Title": os.environ["ISSUE_TITLE"].strip()}
+    argv = command(form)
     booklog.main(argv)
     verb = {"finish": "Finish", "add": "Start" if "--reading" in argv else "Add"}[argv[0]]
     with open(os.environ["MESSAGE_FILE"], "w") as f:

@@ -17,7 +17,7 @@ jobs:
     if: >-
       github.event.issue.state == 'open' &&
       github.event.issue.user.login == github.repository_owner &&
-      startsWith(github.event.issue.body, '### Title')
+      startsWith(github.event.issue.body, '### Author')
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
@@ -31,6 +31,7 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_BODY: ${{ github.event.issue.body }}
           MESSAGE_FILE: ${{ runner.temp }}/message
         run: python scripts/issue.py 2>&1 | tee "$LOG"
