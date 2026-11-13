@@ -186,8 +186,9 @@ def enrich(force: bool = False, only: str | None = None) -> None:
     save_meta(meta)
 
 
-def first_finished_index(books: CommentedSeq) -> int:
-    return next((i for i, b in enumerate(books) if b.get("status") != "reading"), len(books))
+def insert_finished(books: CommentedSeq, book: CommentedMap) -> None:
+    later = (i for i, b in enumerate(books) if b.get("finished", "9999") <= book["finished"])
+    books.insert(next(later, len(books)), book)
 
 
 def add(args: argparse.Namespace) -> None:
@@ -208,7 +209,7 @@ def add(args: argparse.Namespace) -> None:
         book["finished"] = args.month or date.today().strftime("%Y-%m")
         if args.rating is not None:
             book["rating"] = args.rating
-        books.insert(first_finished_index(books), book)
+        insert_finished(books, book)
     save_books(books)
     print(f"Added {args.title}")
     enrich(only=args.title)
@@ -224,7 +225,7 @@ def finish(args: argparse.Namespace) -> None:
     match["finished"] = args.month or date.today().strftime("%Y-%m")
     if args.rating is not None:
         match["rating"] = args.rating
-    books.insert(first_finished_index(books), match)
+    insert_finished(books, match)
     save_books(books)
     print(f"Finished {args.title}")
 
@@ -242,7 +243,7 @@ def month(value: str) -> str:
     return value
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(prog="booklog")
     sub = parser.add_subparsers(dest="command", required=True)
 
@@ -267,7 +268,7 @@ def main() -> None:
     p_enrich.add_argument("--only", metavar="TITLE", help="refetch a single book")
     p_enrich.set_defaults(func=lambda a: enrich(a.force, a.only))
 
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     args.func(args)
 
 

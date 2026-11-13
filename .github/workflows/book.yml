@@ -1,0 +1,50 @@
+name: Book
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: book
+
+jobs:
+  apply:
+    if: >-
+      github.event.issue.state == 'open' &&
+      github.event.issue.user.login == github.repository_owner &&
+      startsWith(github.event.issue.body, '### Title')
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      NUMBER: ${{ github.event.issue.number }}
+      LOG: ${{ runner.temp }}/log
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          MESSAGE_FILE: ${{ runner.temp }}/message
+        run: python scripts/issue.py 2>&1 | tee "$LOG"
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data src/assets/covers
+          git commit -F "$RUNNER_TEMP/message"
+          git push
+          gh workflow run deploy.yml
+          { echo '```'; cat "$LOG" 2>/dev/null; echo '```'; } > "$RUNNER_TEMP/comment"
+          gh issue comment "$NUMBER" --body-file "$RUNNER_TEMP/comment"
+          gh issue close "$NUMBER"
+      - if: failure()
+        run: |
+          { echo "Couldn't apply this. Edit the issue to try again."; echo; echo '```'; cat "$LOG" 2>/dev/null; echo '```'; } > "$RUNNER_TEMP/comment"
+          gh issue comment "$NUMBER" --body-file "$RUNNER_TEMP/comment"

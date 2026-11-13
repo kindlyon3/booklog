@@ -1,0 +1,60 @@
+name: Book
+description: Add a book, or finish the one being read
+title: Book
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Finished
+        - Reading
+    validations:
+      required: true
+  - type: dropdown
+    id: form
+    attributes:
+      label: Form
+      options:
+        - fiction
+        - nonfiction
+        - poetry
+        - religion
+    validations:
+      required: true
+  - type: dropdown
+    id: rating
+    attributes:
+      label: Rating
+      options:
+        - "5"
+        - "4.5"
+        - "4"
+        - "3.5"
+        - "3"
+        - "2.5"
+        - "2"
+        - "1.5"
+        - "1"
+        - "0.5"
+  - type: input
+    id: month
+    attributes:
+      label: Month finished
+      description: YYYY-MM. Leave blank for this month.
+  - type: input
+    id: edition
+    attributes:
+      label: Edition
