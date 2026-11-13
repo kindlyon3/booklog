@@ -22,7 +22,6 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       NUMBER: ${{ github.event.issue.number }}
-      LOG: ${{ runner.temp }}/log
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -34,7 +33,7 @@ jobs:
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_BODY: ${{ github.event.issue.body }}
           MESSAGE_FILE: ${{ runner.temp }}/message
-        run: python scripts/issue.py 2>&1 | tee "$LOG"
+        run: python scripts/issue.py 2>&1 | tee "$RUNNER_TEMP/log"
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -42,10 +41,10 @@ jobs:
           git commit -F "$RUNNER_TEMP/message"
           git push
           gh workflow run deploy.yml
-          { echo '```'; cat "$LOG" 2>/dev/null; echo '```'; } > "$RUNNER_TEMP/comment"
+          { echo '```'; cat "$RUNNER_TEMP/log" 2>/dev/null; echo '```'; } > "$RUNNER_TEMP/comment"
           gh issue comment "$NUMBER" --body-file "$RUNNER_TEMP/comment"
           gh issue close "$NUMBER"
       - if: failure()
         run: |
-          { echo "Couldn't apply this. Edit the issue to try again."; echo; echo '```'; cat "$LOG" 2>/dev/null; echo '```'; } > "$RUNNER_TEMP/comment"
+          { echo "Couldn't apply this. Edit the issue to try again."; echo; echo '```'; cat "$RUNNER_TEMP/log" 2>/dev/null; echo '```'; } > "$RUNNER_TEMP/comment"
           gh issue comment "$NUMBER" --body-file "$RUNNER_TEMP/comment"

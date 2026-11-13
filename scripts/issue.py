@@ -10,7 +10,7 @@ import booklog
 def fields(body: str) -> dict[str, str]:
     parts = re.split(r"^### (.+)$", body, flags=re.MULTILINE)[1:]
     values = {label.strip(): value.strip() for label, value in zip(parts[::2], parts[1::2], strict=True)}
-    return {label: "" if value == "_No response_" else value for label, value in values.items()}
+    return {label: "" if value in ("_No response_", "None") else value for label, value in values.items()}
 
 
 def command(form: dict[str, str]) -> list[str]:

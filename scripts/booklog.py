@@ -198,7 +198,12 @@ def add(args: argparse.Namespace) -> None:
     if any(slugify(b["title"]) == slugify(args.title) for b in books):
         sys.exit(f"{args.title!r} is already in the booklog")
     book = CommentedMap(title=args.title)
-    book["author"] = args.author
+    names = [name.strip() for name in args.author.split(",")]
+    if len(names) > 1:
+        book["author"] = CommentedSeq(names)
+        book["author"].fa.set_flow_style()
+    else:
+        book["author"] = names[0]
     if args.edition:
         book["edition"] = args.edition
     book["form"] = args.form

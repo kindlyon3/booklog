@@ -25,6 +25,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: pipx run ruff check scripts
+      - run: pipx run --spec actionlint-py actionlint
       - run: npm run lint
       - run: npm run check
       - run: npm run build

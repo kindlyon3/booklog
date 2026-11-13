@@ -5,6 +5,7 @@ body:
     id: author
     attributes:
       label: Author
+      description: Separate several with commas.
     validations:
       required: true
   - type: dropdown
