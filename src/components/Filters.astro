@@ -3,10 +3,10 @@ import { FORMS } from "../content.config";
 
 interface Props {
   years: string[];
+  ratings: number[];
 }
 
-const { years } = Astro.props;
-const ratings = [4.5, 4, 3.5, 3];
+const { years, ratings } = Astro.props;
 ---
 
 <form class="filters" role="search" hidden>
@@ -37,7 +37,7 @@ const ratings = [4.5, 4, 3.5, 3];
     <select name="rating">
       <option value="">Any</option>
       {ratings.map((r) => (
-        <option value={r}>{r}+</option>
+        <option value={r}>{r || "Unrated"}</option>
       ))}
     </select>
   </label>
@@ -60,7 +60,7 @@ const ratings = [4.5, 4, 3.5, 3];
       const q = fold(params.get("q") ?? "").trim();
       const year = params.get("year");
       const kind = params.get("form");
-      const rating = Number(params.get("rating") ?? 0);
+      const rating = params.get("rating");
 
       let shown = 0;
       for (const book of books) {
@@ -69,7 +69,7 @@ const ratings = [4.5, 4, 3.5, 3];
           search.includes(q) &&
           (!year || y === year) &&
           (!kind || f === kind) &&
-          Number(r) >= rating;
+          (!rating || r === rating);
         book.hidden = !match;
         if (match) shown++;
       }

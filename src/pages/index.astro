@@ -7,13 +7,15 @@ import { getBooks, groupBy, isFinished, monthName, totalPages } from "../lib/boo
 
 const books = await getBooks();
 const reading = books.filter((book) => book.status === "reading");
-const years = groupBy(books.filter(isFinished), (book) => book.finished.slice(0, 4));
+const finished = books.filter(isFinished);
+const years = groupBy(finished, (book) => book.finished.slice(0, 4));
+const ratings = [...new Set(finished.map((book) => book.rating ?? 0))].sort((a, b) => b - a);
 ---
 
 <Base>
   <h1 class="visually-hidden">Books read</h1>
   <NowReading books={reading} />
-  <Filters years={years.map(([year]) => year)} />
+  <Filters years={years.map(([year]) => year)} ratings={ratings} />
 
   {years.map(([year, yearBooks]) => (
     <section class="year" data-group aria-labelledby={`year-${year}`}>
