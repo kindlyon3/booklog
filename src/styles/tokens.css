@@ -1,0 +1,44 @@
+:root {
+  --bg: #f2eee2;
+  --card: #faf8f1;
+  --ink: #22261f;
+  --muted: #626657;
+  --accent: #2f5a46;
+  --rule: #d6d1c0;
+
+  --serif: "Libre Baskerville", Georgia, serif;
+  --mono: "Fira Mono", ui-monospace, monospace;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+
+  --cover-width: 3.5rem;
+  --measure: 52rem;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #18211d;
+    --card: #1f2a25;
+    --ink: #e4ddc9;
+    --muted: #a3a893;
+    --accent: #c9a55c;
+    --rule: #34403a;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #18211d;
+  --card: #1f2a25;
+  --ink: #e4ddc9;
+  --muted: #a3a893;
+  --accent: #c9a55c;
+  --rule: #34403a;
+  color-scheme: dark;
+}

@@ -1,0 +1,144 @@
+---
+import { FORMS } from "../content.config";
+
+interface Props {
+  years: string[];
+}
+
+const { years } = Astro.props;
+const ratings = [4.5, 4, 3.5, 3];
+---
+
+<form class="filters" role="search" hidden>
+  <label class="search">
+    <span class="label">Search</span>
+    <input type="search" name="q" placeholder="Title or author" autocomplete="off" />
+  </label>
+  <label>
+    <span class="label">Year</span>
+    <select name="year">
+      <option value="">All</option>
+      {years.map((year) => (
+        <option>{year}</option>
+      ))}
+    </select>
+  </label>
+  <label>
+    <span class="label">Form</span>
+    <select name="form">
+      <option value="">All</option>
+      {FORMS.map((form) => (
+        <option value={form}>{form}</option>
+      ))}
+    </select>
+  </label>
+  <label>
+    <span class="label">Rating</span>
+    <select name="rating">
+      <option value="">Any</option>
+      {ratings.map((r) => (
+        <option value={r}>{r}+</option>
+      ))}
+    </select>
+  </label>
+  <p class="meta count" aria-live="polite"></p>
+</form>
+
+<script>
+  import { fold } from "../lib/slugify";
+
+  function setup(form: HTMLFormElement) {
+    const count = form.querySelector(".count");
+    const books = [...document.querySelectorAll<HTMLElement>(".book[data-form]")];
+    const groups = [...document.querySelectorAll<HTMLElement>("[data-group]")];
+
+    function apply() {
+      const params = new URLSearchParams();
+      for (const [key, value] of new FormData(form)) {
+        if (value !== "") params.set(key, String(value));
+      }
+      const q = fold(params.get("q") ?? "").trim();
+      const year = params.get("year");
+      const kind = params.get("form");
+      const rating = Number(params.get("rating") ?? 0);
+
+      let shown = 0;
+      for (const book of books) {
+        const { search = "", year: y, form: f, rating: r } = book.dataset;
+        const match =
+          search.includes(q) &&
+          (!year || y === year) &&
+          (!kind || f === kind) &&
+          Number(r) >= rating;
+        book.hidden = !match;
+        if (match) shown++;
+      }
+      for (const group of groups) {
+        group.hidden = !group.querySelector(".book[data-form]:not([hidden])");
+      }
+      if (count) count.textContent = `${shown} of ${books.length} books`;
+      history.replaceState(null, "", params.size ? `?${params}` : location.pathname);
+    }
+
+    for (const [key, value] of new URLSearchParams(location.search)) {
+      const field = form.elements.namedItem(key);
+      if (field instanceof HTMLInputElement || field instanceof HTMLSelectElement) {
+        field.value = value;
+      }
+    }
+
+    form.addEventListener("input", apply);
+    form.addEventListener("submit", (event) => event.preventDefault());
+    form.hidden = false;
+    apply();
+  }
+
+  const form = document.querySelector<HTMLFormElement>(".filters");
+  if (form) setup(form);
+</script>
+
+<style>
+  .filters {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: var(--space-2) var(--space-3);
+    align-items: end;
+    margin-bottom: var(--space-4);
+  }
+
+  label {
+    display: grid;
+    gap: var(--space-1);
+  }
+
+  input,
+  select {
+    font: 0.9rem var(--mono);
+    color: var(--ink);
+    background: var(--card);
+    border: 1px solid var(--muted);
+    border-radius: 0;
+    padding: var(--space-2);
+    width: 100%;
+    text-transform: capitalize;
+  }
+
+  input {
+    text-transform: none;
+  }
+
+  .count {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+
+  @media (max-width: 40rem) {
+    .filters {
+      grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    }
+
+    .search {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

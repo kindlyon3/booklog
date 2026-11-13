@@ -1,0 +1,45 @@
+---
+import type { GetStaticPaths } from "astro";
+import BookRow from "../../components/BookRow.astro";
+import Base from "../../layouts/Base.astro";
+import { getAuthors, totalPages, url, type Author } from "../../lib/books";
+
+export const getStaticPaths = (async () => {
+  const authors = await getAuthors();
+  return authors.map((author) => ({ params: { slug: author.slug }, props: { author } }));
+}) satisfies GetStaticPaths;
+
+const { author } = Astro.props as { author: Author };
+const { name, books } = author;
+const count = `${books.length} ${books.length === 1 ? "book" : "books"}`;
+---
+
+<Base title={name} description={`Books by ${name} in the booklog.`}>
+  <p class="label">
+    <a href={url("authors/")}>Authors</a>
+  </p>
+  <h1>{name}</h1>
+  <p class="meta">
+    {count} · {totalPages(books).toLocaleString("en-US")} pp
+  </p>
+  <ul class="card">
+    {books.map((book) => (
+      <BookRow book={book} />
+    ))}
+  </ul>
+</Base>
+
+<style>
+  h1 {
+    font-size: 2rem;
+    margin-top: var(--space-2);
+  }
+
+  .meta {
+    margin: var(--space-1) 0 var(--space-3);
+  }
+
+  .label a {
+    text-decoration: none;
+  }
+</style>

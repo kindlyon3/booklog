@@ -1,0 +1,45 @@
+---
+interface Props {
+  rating: number;
+  id: string;
+}
+
+const { rating, id } = Astro.props;
+const clipId = `stars-${id}`;
+const star = "M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z";
+const positions = [0, 1, 2, 3, 4].map((i) => i * 24);
+---
+
+<svg class="stars" viewBox="0 0 120 24" role="img" aria-label={`${rating} out of 5`}>
+  <clipPath id={clipId}>
+    <rect width={rating * 24} height="24"></rect>
+  </clipPath>
+  <g class="empty">
+    {positions.map((x) => (
+      <path d={star} transform={`translate(${x})`} />
+    ))}
+  </g>
+  <g class="full" clip-path={`url(#${clipId})`}>
+    {positions.map((x) => (
+      <path d={star} transform={`translate(${x})`} />
+    ))}
+  </g>
+</svg>
+
+<style>
+  .stars {
+    width: 5.5rem;
+    height: 1.1rem;
+    flex: none;
+  }
+
+  .empty {
+    fill: none;
+    stroke: var(--muted);
+    stroke-width: 1;
+  }
+
+  .full {
+    fill: var(--accent);
+  }
+</style>

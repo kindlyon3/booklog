@@ -1,0 +1,50 @@
+---
+import type { Book } from "../lib/books";
+import Byline from "./Byline.astro";
+import Cover from "./Cover.astro";
+
+interface Props {
+  books: Book[];
+}
+
+const { books } = Astro.props;
+---
+
+{books.length > 0 && (
+  <section class="now-reading" aria-labelledby="now-reading">
+    <h2 id="now-reading" class="label">
+      Now reading
+    </h2>
+    {books.map((book) => (
+      <div class="book">
+        <Cover book={book} />
+        <div>
+          <p class="title">{book.title}</p>
+          <Byline book={book} />
+        </div>
+      </div>
+    ))}
+  </section>
+)}
+
+<style>
+  .now-reading {
+    border: 1px dashed var(--accent);
+    background: var(--card);
+    padding: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+
+  .book {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+    margin-top: var(--space-2);
+  }
+
+  .title {
+    font-size: 1.15rem;
+    font-style: italic;
+    margin: 0;
+  }
+</style>

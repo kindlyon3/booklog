@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import type { Book } from "../lib/books";
+
+interface Props {
+  book: Book;
+}
+
+const { book } = Astro.props;
+---
+
+{book.cover ? (
+  <Image class="cover" src={book.cover} alt="" width={112} loading="lazy" />
+) : (
+  <div class="cover placeholder" aria-hidden="true">
+    {book.title}
+  </div>
+)}
+
+<style>
+  .cover {
+    width: var(--cover-width);
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border: 1px solid var(--rule);
+    flex: none;
+  }
+
+  .placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-1);
+    background: var(--bg);
+    font-family: var(--mono);
+    font-size: 0.5rem;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--muted);
+    overflow: hidden;
+  }
+</style>

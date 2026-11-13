@@ -1,0 +1,409 @@
+- title: The Melancholy of Resistance
+  author: László Krasznahorkai
+  form: fiction
+  status: reading
+
+- title: Satantango
+  author: László Krasznahorkai
+  form: fiction
+  finished: 2026-11
+  rating: 4
+
+- title: Driver
+  author: Mattia Filice
+  form: fiction
+  finished: 2026-10
+  rating: 3
+
+- title: The Art of Fiction
+  author: David Lodge
+  form: nonfiction
+  finished: 2026-10
+
+- title: The Disappearers
+  author: Marlon James
+  form: fiction
+  finished: 2026-10
+  rating: 4.5
+
+- title: The Things We Never Say
+  author: Elizabeth Strout
+  form: fiction
+  finished: 2026-09
+  rating: 3
+
+- title: Black Bag
+  author: Luke Kennard
+  form: fiction
+  finished: 2026-09
+  rating: 3.5
+
+- title: John of John
+  author: Douglas Stuart
+  form: fiction
+  finished: 2026-08
+  rating: 4
+
+- title: The End of Everything
+  author: M. John Harrison
+  form: fiction
+  finished: 2026-08
+  rating: 3
+
+- title: The Palm House
+  author: Gwendoline Riley
+  form: fiction
+  finished: 2026-08
+  rating: 3.5
+
+- title: Helen of Nowhere
+  author: Makenna Goodman
+  form: fiction
+  finished: 2026-08
+  rating: 3
+
+- title: All Them Dogs
+  author: Djamel White
+  form: fiction
+  finished: 2026-08
+  rating: 3
+
+- title: The Vivisectors
+  author: Missouri Williams
+  form: fiction
+  finished: 2026-08
+  rating: 2.5
+
+- title: The Way of Perfection
+  author: Saint Teresa of Ávila
+  form: religion
+  finished: 2026-07
+
+- title: Suttree
+  author: Cormac McCarthy
+  form: fiction
+  finished: 2026-06
+  rating: 4.5
+
+- title: The Gunslinger
+  author: Stephen King
+  form: fiction
+  finished: 2026-05
+  rating: 3
+
+- title: 'The Way to Christ: Spiritual Exercises'
+  author: Pope John Paul II
+  form: religion
+  finished: 2026-05
+
+- title: The Practice of the Presence of God
+  author: Brother Lawrence
+  form: religion
+  finished: 2026-05
+
+- title: The Gospel of Luke
+  author: [Scott Hahn, Curtis Mitch]
+  role: editor
+  edition: Ignatius Catholic Study Bible
+  form: religion
+  finished: 2026-05
+
+- title: The Pocket Meister Eckhart
+  author: Meister Eckhart
+  edition: Shambhala
+  form: religion
+  finished: 2026-04
+
+- title: Introduction to the Devout Life
+  author: Saint Francis de Sales
+  form: religion
+  finished: 2026-04
+
+- title: The Wax Child
+  author: Olga Ravn
+  form: fiction
+  finished: 2026-03
+  rating: 4
+
+- title: We Are Green and Trembling
+  author: Gabriela Cabezón Cámara
+  form: fiction
+  finished: 2026-03
+  rating: 3.5
+
+- title: 'Contemporary Catholic Poetry: An Anthology'
+  author: [April Lindner, Ryan Wilson]
+  role: editor
+  form: poetry
+  finished: 2026-03
+
+- title: The Life of Saint Teresa of Ávila by Herself
+  author: Saint Teresa of Ávila
+  form: religion
+  finished: 2026-03
+
+- title: Faithful and Virtuous Night
+  author: Louise Glück
+  form: poetry
+  finished: 2026-02
+
+- title: Small Things Like These
+  author: Claire Keegan
+  form: fiction
+  finished: 2026-02
+  rating: 3
+
+- title: Lonesome Dove
+  author: Larry McMurtry
+  form: fiction
+  finished: 2026-02
+  rating: 4
+
+- title: Water, Water
+  author: Billy Collins
+  form: poetry
+  finished: 2026-02
+
+- title: Beloved
+  author: Toni Morrison
+  form: fiction
+  finished: 2026-01
+  rating: 4
+
+- title: The Wind-Up Bird Chronicle
+  author: Haruki Murakami
+  olid: OL2625412W
+  form: fiction
+  finished: 2025-12
+  rating: 3
+
+- title: After Dark
+  author: Haruki Murakami
+  form: fiction
+  finished: 2025-12
+  rating: 3
+
+- title: The Land in Winter
+  author: Andrew Miller
+  form: fiction
+  finished: 2025-12
+  rating: 3.5
+
+- title: The Rest of Our Lives
+  author: Benjamin Markovits
+  form: fiction
+  finished: 2025-09
+  rating: 2.5
+
+- title: One Boat
+  author: Jonathan Buckley
+  form: fiction
+  finished: 2025-08
+  rating: 3
+
+- title: Misinterpretation
+  author: Ledia Xhoga
+  form: fiction
+  finished: 2025-08
+  rating: 3
+
+- title: The South
+  author: Tash Aw
+  form: fiction
+  finished: 2025-08
+  rating: 4
+
+- title: Audition
+  author: Katie Kitamura
+  form: fiction
+  finished: 2025-08
+  rating: 3
+
+- title: Flesh
+  author: David Szalay
+  form: fiction
+  finished: 2025-08
+  rating: 3
+
+- title: Perfection
+  author: Vincenzo Latronico
+  form: fiction
+  finished: 2025-07
+  rating: 3
+
+- title: Kafka on the Shore
+  author: Haruki Murakami
+  form: fiction
+  finished: 2025-07
+  rating: 4.5
+
+- title: Jesus' Son
+  author: Denis Johnson
+  form: fiction
+  finished: 2025-06
+  rating: 3
+
+- title: Norwegian Wood
+  author: Haruki Murakami
+  form: fiction
+  finished: 2025-06
+  rating: 4.5
+
+- title: Wandering Stars
+  author: Tommy Orange
+  form: fiction
+  finished: 2025-05
+  rating: 2
+
+- title: Knockemstiff
+  author: Donald Ray Pollock
+  form: fiction
+  finished: 2025-05
+  rating: 3
+
+- title: A Leopard-Skin Hat
+  author: Anne Serre
+  form: fiction
+  finished: 2025-05
+  rating: 3.5
+
+- title: East of Eden
+  author: John Steinbeck
+  form: fiction
+  finished: 2025-05
+  rating: 4
+
+- title: Hamlet
+  author: William Shakespeare
+  edition: Folger
+  form: fiction
+  finished: 2025-04
+  rating: 3.5
+
+- title: Macbeth
+  author: William Shakespeare
+  published: 1606
+  edition: Folger
+  form: fiction
+  finished: 2025-04
+  rating: 4
+
+- title: The Goldfinch
+  author: Donna Tartt
+  form: fiction
+  finished: 2025-04
+  rating: 4
+
+- title: As I Lay Dying
+  author: William Faulkner
+  form: fiction
+  finished: 2025-04
+  rating: 2.5
+
+- title: 'Babel: An Arcane History'
+  author: R.F. Kuang
+  form: fiction
+  finished: 2025-04
+  rating: 2
+
+- title: The Violent Bear It Away
+  author: Flannery O'Connor
+  form: fiction
+  finished: 2025-04
+  rating: 2.5
+
+- title: Wild Houses
+  author: Colin Barrett
+  form: fiction
+  finished: 2025-03
+  rating: 3.5
+
+- title: The Little Friend
+  author: Donna Tartt
+  form: fiction
+  finished: 2025-03
+  rating: 3.5
+
+- title: Station Eleven
+  author: Emily St. John Mandel
+  form: fiction
+  finished: 2025-03
+  rating: 4
+
+- title: The Secret History
+  author: Donna Tartt
+  form: fiction
+  finished: 2025-02
+  rating: 4
+
+- title: Beasts of a Little Land
+  author: Juhea Kim
+  form: fiction
+  finished: 2025-02
+  rating: 3
+
+- title: Martyr!
+  author: Kaveh Akbar
+  form: fiction
+  finished: 2025-02
+  rating: 3.5
+
+- title: Prophet Song
+  author: Paul Lynch
+  form: fiction
+  finished: 2025-02
+  rating: 4
+
+- title: Go Tell It on the Mountain
+  author: James Baldwin
+  form: fiction
+  finished: 2025-02
+  rating: 3.5
+
+- title: Creation Lake
+  author: Rachel Kushner
+  form: fiction
+  finished: 2025-02
+  rating: 2.5
+
+- title: "There's Always This Year: On Basketball and Ascension"
+  author: Hanif Abdurraqib
+  form: nonfiction
+  finished: 2025-02
+  rating: 3.5
+
+- title: Stoner
+  author: John Williams
+  form: fiction
+  finished: 2025-01
+  rating: 4
+
+- title: Orbital
+  author: Samantha Harvey
+  form: fiction
+  finished: 2025-01
+  rating: 3.5
+
+- title: The Sun Also Rises
+  author: Ernest Hemingway
+  form: fiction
+  finished: 2025-01
+  rating: 3.5
+
+- title: 'Technofeudalism: What Killed Capitalism'
+  author: Yanis Varoufakis
+  form: nonfiction
+  finished: 2025-01
+  rating: 3
+
+- title: The Grifters
+  author: Jim Thompson
+  form: fiction
+  finished: 2025-01
+  rating: 2
+
+- title: For Whom the Bell Tolls
+  author: Ernest Hemingway
+  form: fiction
+  finished: 2025-01
+  rating: 3

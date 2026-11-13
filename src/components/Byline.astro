@@ -1,0 +1,21 @@
+---
+import { url, type Book } from "../lib/books";
+import { slugify } from "../lib/slugify";
+
+interface Props {
+  book: Book;
+}
+
+const { book } = Astro.props;
+const suffix = { editor: ", ed.", translator: ", trans." };
+---
+
+<span class="byline">
+  {book.authors.map((name, i) => (
+    <>
+      {i > 0 && (i === book.authors.length - 1 ? " and " : ", ")}
+      <a href={url(`authors/${slugify(name)}/`)}>{name}</a>
+    </>
+  ))}
+  {book.role && suffix[book.role]}
+</span>

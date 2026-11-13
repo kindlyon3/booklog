@@ -1,0 +1,39 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getAuthors, url } from "../../lib/books";
+
+const authors = await getAuthors();
+---
+
+<Base title="Authors" description="Every author in the booklog.">
+  <h1>Authors</h1>
+  <ul class="card">
+    {authors.map(({ name, slug, books }) => (
+      <li>
+        <a href={url(`authors/${slug}/`)}>{name}</a>
+        <span class="meta">{books.length}</span>
+      </li>
+    ))}
+  </ul>
+</Base>
+
+<style>
+  h1 {
+    font-size: 2rem;
+    margin-bottom: var(--space-3);
+  }
+
+  ul {
+    columns: 16rem;
+    column-gap: var(--space-5);
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+    padding-block: var(--space-1);
+    border-bottom: 1px dashed var(--rule);
+    break-inside: avoid;
+  }
+</style>

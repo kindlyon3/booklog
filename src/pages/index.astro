@@ -1,0 +1,64 @@
+---
+import BookRow from "../components/BookRow.astro";
+import Filters from "../components/Filters.astro";
+import NowReading from "../components/NowReading.astro";
+import Base from "../layouts/Base.astro";
+import { getBooks, groupBy, isFinished, monthName, totalPages } from "../lib/books";
+
+const books = await getBooks();
+const reading = books.filter((book) => book.status === "reading");
+const years = groupBy(books.filter(isFinished), (book) => book.finished.slice(0, 4));
+---
+
+<Base>
+  <h1 class="visually-hidden">Books read</h1>
+  <NowReading books={reading} />
+  <Filters years={years.map(([year]) => year)} />
+
+  {years.map(([year, yearBooks]) => (
+    <section class="year" data-group aria-labelledby={`year-${year}`}>
+      <h2 id={`year-${year}`}>
+        {year}
+        <span class="meta">
+          {yearBooks.length} books · {totalPages(yearBooks).toLocaleString("en-US")} pp
+        </span>
+      </h2>
+      {groupBy(yearBooks, (book) => book.finished).map(([month, monthBooks]) => (
+        <section class="card" data-group>
+          <h3 class="label">
+            [ {monthName(month)} {year} ]
+          </h3>
+          <ul>
+            {monthBooks.map((book) => (
+              <BookRow book={book} />
+            ))}
+          </ul>
+        </section>
+      ))}
+    </section>
+  ))}
+</Base>
+
+<style>
+  .year {
+    margin-bottom: var(--space-5);
+  }
+
+  .year > h2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-3);
+    font-size: 2rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .card + .card {
+    margin-top: var(--space-3);
+  }
+
+  .card > h3 {
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--rule);
+  }
+</style>

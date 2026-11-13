@@ -1,0 +1,403 @@
+{
+  "a-leopard-skin-hat": {
+    "olid": "OL2219594W",
+    "matched": "Un chapeau léopard / Anne Serre",
+    "published": 2008
+  },
+  "after-dark": {
+    "olid": "OL34780178W",
+    "matched": "After dark / 村上春樹, Albert Nolla Cabellos",
+    "pages": 176,
+    "published": 2009
+  },
+  "all-them-dogs": {
+    "olid": "OL45393979W",
+    "matched": "All Them Dogs / Djamel White"
+  },
+  "as-i-lay-dying": {
+    "olid": "OL82929W",
+    "matched": "As I Lay Dying / William Faulkner",
+    "pages": 250,
+    "published": 1915
+  },
+  "audition": {
+    "olid": "OL42417173W",
+    "matched": "Audition / Katie M. Kitamura",
+    "pages": 208,
+    "published": 2025
+  },
+  "babel-an-arcane-history": {
+    "olid": "OL26443093W",
+    "matched": "Babel / R. F. Kuang, Michel Pagel",
+    "pages": 560,
+    "published": 2022
+  },
+  "beasts-of-a-little-land": {
+    "olid": "OL24412955W",
+    "matched": "Beasts of a Little Land / Juhea Kim",
+    "pages": 416,
+    "published": 2021
+  },
+  "beloved": {
+    "olid": "OL50548W",
+    "matched": "Beloved / Toni Morrison",
+    "pages": 288,
+    "published": 1987
+  },
+  "black-bag": {
+    "olid": "OL45863001W",
+    "matched": "Black Bag / Luke Kennard",
+    "pages": 347,
+    "published": 2026
+  },
+  "contemporary-catholic-poetry-an-anthology": {
+    "olid": "OL37883652W",
+    "matched": "Contemporary Catholic Poetry / April Lindner, Ryan Wilson",
+    "published": 2024
+  },
+  "creation-lake": {
+    "olid": "OL37586804W",
+    "matched": "Creation Lake / Rachel Kushner",
+    "pages": 416,
+    "published": 2024
+  },
+  "driver": {
+    "olid": "OL42567118W",
+    "matched": "Driver / Mattia Filice, Jacques Houis",
+    "pages": 304,
+    "published": 2025
+  },
+  "east-of-eden": {
+    "olid": "OL23166W",
+    "matched": "East of Eden / John Steinbeck",
+    "pages": 602,
+    "published": 1952
+  },
+  "faithful-and-virtuous-night": {
+    "olid": "OL19670656W",
+    "matched": "Faithful and virtuous night / Louise Glück",
+    "pages": 75,
+    "published": 2014
+  },
+  "flesh": {
+    "olid": "OL42406155W",
+    "matched": "Flesh / David Szalay",
+    "pages": 368,
+    "published": 2025
+  },
+  "for-whom-the-bell-tolls": {
+    "olid": "OL63009W",
+    "matched": "For Whom the Bell Tolls / Ernest Hemingway",
+    "pages": 475,
+    "published": 1940
+  },
+  "go-tell-it-on-the-mountain": {
+    "olid": "OL228705W",
+    "matched": "Go Tell It on the Mountain / James Baldwin",
+    "pages": 226,
+    "published": 1952
+  },
+  "hamlet": {
+    "olid": "OL9170454W",
+    "matched": "Hamlet / William Shakespeare",
+    "pages": 182,
+    "published": 1603
+  },
+  "helen-of-nowhere": {
+    "olid": "OL45341637W",
+    "matched": "Helen of Nowhere / Makenna Goodman"
+  },
+  "introduction-to-the-devout-life": {
+    "olid": "OL21817902W",
+    "matched": "Introduction to the Devout Life / Francis De Sales",
+    "pages": 251,
+    "published": 2005
+  },
+  "jesus-son": {
+    "olid": "OL14961795W",
+    "matched": "Jesus' Son. / Denis Johnson, Will Patton",
+    "pages": 144,
+    "published": 2002
+  },
+  "john-of-john": {
+    "olid": "OL45341670W",
+    "matched": "John of John / Douglas Stuart",
+    "published": 2026
+  },
+  "kafka-on-the-shore": {
+    "olid": "OL2625431W",
+    "matched": "海辺のカフカ / 村上春樹",
+    "pages": 492,
+    "published": 2001
+  },
+  "knockemstiff": {
+    "olid": "OL9334421W",
+    "matched": "Knockemstiff / Donald Ray Pollock",
+    "pages": 224,
+    "published": 2008
+  },
+  "lonesome-dove": {
+    "olid": "OL134601W",
+    "matched": "Lonesome Dove / Larry McMurtry",
+    "pages": 945,
+    "published": 1985
+  },
+  "macbeth": {
+    "olid": "OL258902W",
+    "matched": "Macbeth / William Shakespeare",
+    "pages": 110,
+    "published": 1508
+  },
+  "martyr": {
+    "olid": "OL37505411W",
+    "matched": "Martyr! / Kaveh Akbar",
+    "pages": 352,
+    "published": 2024
+  },
+  "misinterpretation": {
+    "olid": "OL37884080W",
+    "matched": "Misinterpretation / Ledia Xhoga",
+    "published": 2024
+  },
+  "norwegian-wood": {
+    "olid": "OL2625457W",
+    "matched": "Norwegian Wood / 村上春樹",
+    "pages": 389,
+    "published": 1987
+  },
+  "one-boat": {
+    "olid": "OL42547525W",
+    "matched": "One Boat / Jonathan Buckley",
+    "pages": 172,
+    "published": 2025
+  },
+  "orbital": {
+    "olid": "OL35708581W",
+    "matched": "Orbital / Samantha Harvey",
+    "pages": 144,
+    "published": 2023
+  },
+  "perfection": {
+    "olid": "OL37574038W",
+    "matched": "Perfection / Vincenzo Latronico",
+    "pages": 136,
+    "published": 2024
+  },
+  "prophet-song": {
+    "olid": "OL34341539W",
+    "matched": "Prophet Song / Paul Lynch",
+    "pages": 259,
+    "published": 2023
+  },
+  "satantango": {
+    "olid": "OL3428975W",
+    "matched": "Sátántangó / László Krasznahorkai",
+    "pages": 289,
+    "published": 1985
+  },
+  "small-things-like-these": {
+    "olid": "OL23020966W",
+    "matched": "Small Things Like These / Claire Keegan",
+    "pages": 116,
+    "published": 2020
+  },
+  "station-eleven": {
+    "olid": "OL17202418W",
+    "matched": "Station Eleven / Emily St. John Mandel",
+    "pages": 352,
+    "published": 2014
+  },
+  "stoner": {
+    "olid": "OL3511459W",
+    "matched": "Stoner / John Williams",
+    "pages": 278,
+    "published": 1965
+  },
+  "suttree": {
+    "olid": "OL40885W",
+    "matched": "Suttree / Cormac McCarthy",
+    "pages": 471,
+    "published": 1979
+  },
+  "technofeudalism-what-killed-capitalism": {
+    "olid": "OL34024904W",
+    "matched": "Techno-Feudalism / Yanis Varoufakis",
+    "pages": 381,
+    "published": 2023
+  },
+  "the-art-of-fiction": {
+    "olid": "OL2916808W",
+    "matched": "The art of fiction / David Lodge",
+    "pages": 240,
+    "published": 1992
+  },
+  "the-disappearers": {
+    "olid": "OL45862992W",
+    "matched": "The Disappearers / Marlon James",
+    "pages": 640,
+    "published": 2026
+  },
+  "the-end-of-everything": {
+    "olid": "OL45793279W",
+    "matched": "The End of Everything / M. John Harrison",
+    "published": 2026
+  },
+  "the-goldfinch": {
+    "olid": "OL16809803W",
+    "matched": "The Goldfinch / Donna Tartt, Katia Benovich",
+    "pages": 1005,
+    "published": 2013
+  },
+  "the-gospel-of-luke": {
+    "olid": "OL82151W",
+    "matched": "The Gospel of Luke / Scott Hahn",
+    "pages": 91,
+    "published": 2001
+  },
+  "the-grifters": {
+    "olid": "OL13420889W",
+    "matched": "The Grifters / Jim Thompson",
+    "pages": 192,
+    "published": 1963
+  },
+  "the-gunslinger": {
+    "olid": "OL81628W",
+    "matched": "The Gunslinger / Stephen King",
+    "pages": 238,
+    "published": 1976
+  },
+  "the-land-in-winter": {
+    "olid": "OL38128001W",
+    "matched": "The Land in Winter / Andrew Miller",
+    "pages": 352,
+    "published": 2024
+  },
+  "the-life-of-saint-teresa-of-avila-by-herself": {
+    "olid": "OL20955511W",
+    "matched": "Life of St. Teresa of Avila / Teresa of Avila",
+    "pages": 432,
+    "published": 1962
+  },
+  "the-little-friend": {
+    "olid": "OL4321136W",
+    "matched": "The Little Friend / Donna Tartt",
+    "pages": 576,
+    "published": 2000
+  },
+  "the-melancholy-of-resistance": {
+    "olid": "OL3428973W",
+    "matched": "Az ellenállás melankóliája / László Krasznahorkai",
+    "pages": 317,
+    "published": 1989
+  },
+  "the-palm-house": {
+    "olid": "OL45848768W",
+    "matched": "The Palm House / Gwendoline Riley",
+    "pages": 224,
+    "published": 2026
+  },
+  "the-pocket-meister-eckhart": {
+    "olid": "OL20574329W",
+    "matched": "The Pocket Meister Eckhart / ",
+    "pages": 152,
+    "published": 2018
+  },
+  "the-practice-of-the-presence-of-god": {
+    "olid": "OL39905029W",
+    "matched": "Practice of the Presence of God / Donald E. Demaray, Brother Lawrence of the Resurrection",
+    "pages": 40,
+    "published": 1958
+  },
+  "the-rest-of-our-lives": {
+    "olid": "OL44598161W",
+    "matched": "Rest of Our Lives / Ben Markovits",
+    "pages": 240,
+    "published": 2025
+  },
+  "the-secret-history": {
+    "olid": "OL4321141W",
+    "matched": "The Secret History / Donna Tartt",
+    "pages": 559,
+    "published": 1992
+  },
+  "the-south": {
+    "olid": "OL42413651W",
+    "matched": "The South / Tash Aw",
+    "pages": 304,
+    "published": 2025
+  },
+  "the-sun-also-rises": {
+    "olid": "OL62979W",
+    "matched": "The Sun Also Rises / Ernest Hemingway",
+    "pages": 247,
+    "published": 1926
+  },
+  "the-things-we-never-say": {
+    "olid": "OL44679187W",
+    "matched": "The Things We Never Say / Elizabeth Strout",
+    "published": 2026
+  },
+  "the-violent-bear-it-away": {
+    "olid": "OL65293W",
+    "matched": "The violent bear it away / Flannery O'Connor",
+    "pages": 243,
+    "published": 1960
+  },
+  "the-vivisectors": {
+    "olid": "OL45668615W",
+    "matched": "The Vivisectors / Missouri Williams",
+    "published": 2026
+  },
+  "the-wax-child": {
+    "olid": "OL42884743W",
+    "matched": "Voksbarnet / Olga Ravn",
+    "pages": 176,
+    "published": 2023
+  },
+  "the-way-of-perfection": {
+    "olid": "OL42230139W",
+    "matched": "The way of perfection / Teresa of Avila",
+    "pages": 250,
+    "published": 1901
+  },
+  "the-way-to-christ-spiritual-exercises": {
+    "olid": "OL260831W",
+    "matched": "The Way to Christ / John Paul II",
+    "pages": 149,
+    "published": 1984
+  },
+  "the-wind-up-bird-chronicle": {
+    "olid": "OL2625412W",
+    "matched": "ねじまき鳥クロニクル / 村上春樹",
+    "pages": 613,
+    "published": 1997
+  },
+  "there-s-always-this-year-on-basketball-and-ascension": {
+    "olid": "OL37573756W",
+    "matched": "There's Always This Year / Hanif Abdurraqib",
+    "pages": 352,
+    "published": 2024
+  },
+  "wandering-stars": {
+    "olid": "OL37576030W",
+    "matched": "Wandering Stars / Tommy Orange",
+    "published": 2024
+  },
+  "water-water": {
+    "olid": "OL42400861W",
+    "matched": "Water, Water / Billy Collins",
+    "pages": 144,
+    "published": 2025
+  },
+  "we-are-green-and-trembling": {
+    "olid": "OL42411659W",
+    "matched": "We Are Green and Trembling / Gabriela Cabezón Cámara, Robin Myers",
+    "pages": 256,
+    "published": 2025
+  },
+  "wild-houses": {
+    "olid": "OL37568056W",
+    "matched": "Wild Houses / Colin Barrett",
+    "published": 2024
+  }
+}

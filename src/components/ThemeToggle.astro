@@ -1,0 +1,45 @@
+<button class="label theme-toggle" type="button" hidden></button>
+
+<script>
+  const root = document.documentElement;
+  const prefersDark = matchMedia("(prefers-color-scheme: dark)");
+  const current = () => root.dataset.theme ?? (prefersDark.matches ? "dark" : "light");
+  const opposite = () => (current() === "dark" ? "light" : "dark");
+
+  function setup(button: HTMLButtonElement) {
+    const render = () => {
+      button.textContent = opposite() === "dark" ? "Dark" : "Light";
+      button.setAttribute("aria-label", `Switch to ${opposite()} theme`);
+    };
+
+    button.addEventListener("click", () => {
+      root.dataset.theme = opposite();
+      try {
+        localStorage.setItem("theme", root.dataset.theme);
+      } catch {
+        // Storage blocked; theme still applies for this page.
+      }
+      render();
+    });
+    prefersDark.addEventListener("change", render);
+
+    render();
+    button.hidden = false;
+  }
+
+  const button = document.querySelector<HTMLButtonElement>(".theme-toggle");
+  if (button) setup(button);
+</script>
+
+<style>
+  .theme-toggle {
+    background: none;
+    border: 1px solid var(--muted);
+    padding: var(--space-1) var(--space-2);
+    cursor: pointer;
+  }
+
+  .theme-toggle:hover {
+    border-color: var(--accent);
+  }
+</style>
